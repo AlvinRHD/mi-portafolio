@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f5f3">
+  <meta name="description" content="Portafolio de Alvin Rosales, estudiante de Ingeniería en Desarrollo de Software.">
+  <title>Alvin Rosales | Portafolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#inicio">Ir al contenido</a>
+
+  <!-- Iconos sencillos, sin librerías adicionales -->
+  <svg class="icons" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10h-6v-6H9v6H3z"/></symbol>
+    <symbol id="user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></symbol>
+    <symbol id="work" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></symbol>
+    <symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+    <symbol id="download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 17v4h16v-4"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 19 19 5M9 5h10v10"/></symbol>
+    <symbol id="github" viewBox="0 0 24 24">
+  <path d="M9 19c-4.3 1.4-4.3-2.5-6-3"/>
+  <path d="M15 22v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77 5.07 5.07 0 0 0 18.91 1S17.73.65 15 2.48a13.38 13.38 0 0 0-7 0C5.27.65 4.09 1 4.09 1A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 8 18.13V22"/>
+</symbol>
+
+<symbol id="linkedin" viewBox="0 0 24 24">
+  <rect x="2" y="2" width="20" height="20" rx="2"/>
+  <path d="M7 10v7M7 7h.01M11 17v-7h3v1.4a3 3 0 0 1 6 0V17"/>
+</symbol>
+  </svg>
+
+  <header class="site-header container">
+    <a class="brand" href="#inicio">Alvin Rosales<span>.</span></a>
+    <span class="header-note">Desarrollo de software</span>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero-content">
+        <p class="eyebrow">Hola, soy Alvin Rosales</p>
+        <h1 id="hero-title">Ideas simples.<br><span>Experiencias que importan.</span></h1>
+        <p class="hero-description">Estudiante de Ingeniería en Desarrollo de Software. Me gusta crear para la web, explorar nuevas ideas y aprender en el proceso.</p>
+        <div class="hero-actions">
+          <!-- Coloca tu PDF como cv.pdf junto a este archivo -->
+          <a class="button button-primary" href="cv.pdf" download="CV-Alvin-Rosales.pdf">
+            Descargar CV <svg class="icon" aria-hidden="true"><use href="#download"/></svg>
+          </a>
+          <a class="button button-secondary" href="#proyectos">Ver proyectos <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
+        </div>
+
+        <!-- Un pequeño detalle interactivo, sin recargar el inicio -->
+        <div class="code-card" id="code-card">
+          <div class="code-bar">
+            <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span id="code-filename">idea.js</span>
+            <button class="code-toggle" id="code-toggle" type="button" aria-pressed="false">Ver resultado ↗</button>
+          </div>
+          <div class="code-body">
+            <div class="code-example" aria-hidden="true">
+              <p><span>01</span> const idea = <strong>"crear algo útil"</strong>;</p>
+              <p><span>02</span> const detalle = <strong>"hacerlo simple"</strong>;</p>
+              <p><span>03</span> construir(idea, detalle);<b class="cursor"></b></p>
+            </div>
+            <div class="code-result" aria-hidden="true">
+              <span class="result-dot"></span>
+              <p>Una buena idea empieza aquí.</p>
+              <small>Hecha con curiosidad y código.</small>
+            </div>
+          </div>
+        </div>
+        <p class="hero-bottom">Desliza para conocer más <span aria-hidden="true">↓</span></p>
+      </div>
+    </section>
+
+    <!-- Menú flotante: solo iconos y etiqueta al pasar o tocar -->
+    
+<nav class="floating-nav" aria-label="Navegación principal">
+
+  <a class="nav-link is-active" href="#inicio" aria-label="Inicio" aria-current="location">
+    <svg class="icon" aria-hidden="true"><use href="#home"/></svg>
+    <span class="nav-tooltip" aria-hidden="true">Inicio</span>
+  </a>
+
+  <a class="nav-link" href="#sobre-mi" aria-label="Sobre mí">
+    <svg class="icon" aria-hidden="true"><use href="#user"/></svg>
+    <span class="nav-tooltip" aria-hidden="true">Sobre mí</span>
+  </a>
+
+  <a class="nav-link" href="#proyectos" aria-label="Proyectos">
+    <svg class="icon" aria-hidden="true"><use href="#work"/></svg>
+    <span class="nav-tooltip" aria-hidden="true">Proyectos</span>
+  </a>
+
+  <a class="nav-link" href="#contacto" aria-label="Contacto">
+    <svg class="icon" aria-hidden="true"><use href="#mail"/></svg>
+    <span class="nav-tooltip" aria-hidden="true">Contacto</span>
+  </a>
+
+  <span class="nav-divider" aria-hidden="true"></span>
+
+  <a class="nav-link" href="https://github.com/AlvinRHD"
+     target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+    <svg class="icon" aria-hidden="true"><use href="#github"/></svg>
+    <span class="nav-tooltip" aria-hidden="true">GitHub</span>
+  </a>
+
+  <a class="nav-link" href="https://www.linkedin.com/in/devalvin/"
+     target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+    <svg class="icon" aria-hidden="true"><use href="#linkedin"/></svg>
+    <span class="nav-tooltip" aria-hidden="true">LinkedIn</span>
+  </a>
+
+</nav>
+
+
+    <section class="section about-section" id="sobre-mi" aria-labelledby="about-title">
+      <div class="container">
+        <p class="section-label">01 / Sobre mí</p>
+        <div class="about-layout">
+          <!-- Iniciales temporales. Lee el README para poner tu foto circular. -->
+          <div class="portrait"><img src="foto.jpg" alt="Foto de Alvin Rosales" /></div>
+          <div class="about-content">
+            <h2 id="about-title">Un poco sobre mí<span>.</span></h2>
+            <p>Soy <strong>Alvin Rosales</strong>, estudiante de Ingeniería en Desarrollo de Software. Disfruto entender cómo funcionan las cosas y convertir lo aprendido en proyectos que se puedan usar.</p>
+            <p>Me interesan el desarrollo web, las interfaces claras y las experiencias interactivas en 3D. Prefiero los diseños sencillos, con atención a los pequeños detalles.</p>
+          </div>
+        </div>
+        <div class="skills-block">
+          <div>
+            <h3>Lo que hago</h3>
+            <p>Áreas en las que aprendo y desarrollo proyectos.</p>
+          </div>
+          <div class="skills-list">
+            <div><span>01</span><strong>Desarrollo web</strong><small>HTML, CSS y JavaScript</small></div>
+            <div><span>02</span><strong>Interfaces</strong><small>Diseño adaptable y accesible</small></div>
+            <div><span>03</span><strong>Experiencias 3D</strong><small>Blender y Three.js</small></div>
+            <div><span>04</span><strong>Herramientas</strong><small>Git, GitHub y VS Code</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="proyectos" aria-labelledby="projects-title">
+      <div class="container">
+        <p class="section-label">02 / Proyectos</p>
+        <div class="section-head">
+          <h2 id="projects-title">Algunas ideas en marcha<span>.</span></h2>
+          <p>Proyectos que estoy construyendo y espacios para los próximos.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-cover cover-campus" aria-label="Representación gráfica de un campus 3D">
+              <span class="cover-index">01</span>
+              <div class="campus-graphic" aria-hidden="true"><i></i><i></i><i></i></div>
+              <span class="cover-text">TIERRAS / info</span>
+            </div>
+            <div class="project-meta"><span>Listo</span><span>IA</span></div>
+            <h3>Las tierras de don gustavo</h3>
+            <p>Un recorrido por las tierras de don gustavo</p>
+
+            <div class="project-links">
+              <a href="https://lastierrasdedongustavo.netlify.app/"
+                target="_blank" rel="noopener noreferrer">
+                Ver proyecto -
+              </a>
+
+              <a href="https://github.com/AlvinRHD/tierras-de-don-gustavo.git"
+                target="_blank" rel="noopener noreferrer">
+                GitHub -
+              </a>
+            </div>
+
+          </article>
+          <article class="project-card">
+            <div class="project-cover cover-web" aria-label="Ilustración de una interfaz web de ejemplo">
+              <span class="cover-index">02</span>
+              <div class="web-graphic" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+              <span class="cover-text">WEB / UI</span>
+            </div>
+            <div class="project-meta"><span>Espacio de ejemplo</span><span>HTML · CSS · JS</span></div>
+            <h3>Mi próximo sitio web</h3>
+            <p>Espacio reservado para mostrar un sitio que desarrolle y compartir su resultado.</p>
+          </article>
+          <article class="project-card">
+            <div class="project-cover cover-next" aria-label="Tarjeta reservada para un futuro proyecto">
+              <span class="cover-index">03</span>
+              <span class="next-symbol" aria-hidden="true">↗</span>
+              <span class="cover-text">NEXT / IDEA</span>
+            </div>
+            <div class="project-meta"><span>Espacio de ejemplo</span><span>Próximamente</span></div>
+            <h3>Lo siguiente</h3>
+            <p>Un lugar para ese próximo proyecto que merezca estar en mi portafolio.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contacto" aria-labelledby="contact-title">
+      <div class="container contact-content">
+        <p class="section-label">03 / Contacto</p>
+        <h2 id="contact-title">¿Tienes una idea en mente?<br><span>Hablemos.</span></h2>
+        <p>Siempre hay espacio para una buena conversación y nuevas oportunidades.</p>
+        <!-- Cambia este correo de ejemplo por el tuyo -->
+        <a class="button button-primary" href="mailto:alvincontact07@gmail.com">Enviar correo <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <span>© <span id="year">2026</span> Alvin Rosales</span>
+      <span>Hecho con HTML, CSS y JS.</span>
+      <a href="#inicio">Volver arriba ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
